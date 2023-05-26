@@ -10,6 +10,7 @@
 2. is_circular_shift_of()
 3. to_infix()
 4. to_postfix()
+5. eval_postfix()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
