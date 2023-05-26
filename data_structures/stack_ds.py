@@ -42,6 +42,9 @@ class Stack:
 
     def pop(self) -> str:
         """Pops an item from the stack and returns it"""
+        if self.is_empty():
+            raise IndexError("Cannot pop from an empty stack")
+
         old_first = self._first
         self._first = old_first.next
 
@@ -68,6 +71,8 @@ def main():
     print(test_stack.pop())
 
     print(test_stack.size)
+    print(test_stack.pop())
+    print(test_stack.pop())
 
 
 # ---------------------------------------------------------------------------------------------------------
