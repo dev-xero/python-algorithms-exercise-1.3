@@ -22,6 +22,9 @@ def is_valid_parens(string: str) -> bool:
     }
     opening_parens_stack = Stack()
 
+    if len(string) % 2 != 0:
+        raise Exception("Parenthesis string must be even numbered")
+
     for paren in string:
         if paren in parens_map.keys():
             opening_parens_stack.push(paren)
