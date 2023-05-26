@@ -51,6 +51,10 @@ class Stack:
         self._size -= 1
         return old_first.item
 
+    def peek(self) -> Node:
+        """Returns the least recently added item in the stack"""
+        return self._first
+
 
 # ---------------------------------------------------------------------------------------------------------
 
