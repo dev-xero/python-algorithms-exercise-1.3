@@ -8,6 +8,7 @@
 ## Algorithms Implemented
 1. is_valid_parens()
 2. is_circular_shift_of()
+3. convert_to_infix_expression()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
