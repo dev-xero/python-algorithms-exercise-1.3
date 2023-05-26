@@ -7,3 +7,22 @@
 
 ## Algorithms Implemented
 1. is_valid_parens()
+
+## Code Examples
+Some code examples of the algorithms and data structures implemented.  
+
+### 1. Linked List Node
+```python3
+    class Node:
+    """Linked list implementation in Python"""
+    def __init__(self):
+        """Setup"""
+        self.item: str | None = None
+        self.next: Node | None = None
+```
+
+### 2. is_valid_parens()
+```python3
+    balanced_parens_string = "(({[()]})[])"
+    print(is_valid_parens(balanced_parens_string))  # the string is balanced
+```
