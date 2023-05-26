@@ -8,6 +8,7 @@
 
 
 class Node:
+    """Linked list implementation in Python"""
     def __init__(self):
         """Setup"""
         self.item: str | None = None
