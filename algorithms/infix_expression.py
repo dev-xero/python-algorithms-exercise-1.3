@@ -13,7 +13,7 @@ from data_structures.stack_ds import Stack
 # ---------------------------------------------------------------------------------------------------------
 
 
-def convert_to_infix_expression(expression: str) -> str:
+def to_infix(expression: str) -> str:
     """Properly parenthesizes a non-infix expression"""
     stack = Stack()
     operators = ["+", "-", "/", "*"]
@@ -45,7 +45,7 @@ def convert_to_infix_expression(expression: str) -> str:
 def main():
     """Testing"""
     expression = str(input("Enter the expression: "))  # 1 + 2 ) * 3 - 4 ) * 5 - 6 ) ) ) works
-    infix_expression = convert_to_infix_expression(expression)
+    infix_expression = to_infix(expression)
 
     print(infix_expression)
 

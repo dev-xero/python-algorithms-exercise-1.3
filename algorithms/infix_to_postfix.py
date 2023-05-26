@@ -8,7 +8,7 @@
 
 
 from data_structures.stack_ds import Stack
-from algorithms.infix_expression import convert_to_infix_expression
+from algorithms.infix_expression import to_infix
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -16,7 +16,7 @@ from algorithms.infix_expression import convert_to_infix_expression
 
 def to_postfix(expression: str) -> str:
     """Returns the postfix equivalent of a fully parenthesized infix expression"""
-    infix_expression = convert_to_infix_expression(expression)  # convert to a valid infix
+    infix_expression = to_infix(expression)  # convert to a valid infix
     expression_array = infix_expression.split(" ")
 
     stack: Stack = Stack()
