@@ -41,7 +41,7 @@ class Stack:
         self._size += 1
 
     def pop(self) -> str:
-        """Pops an item from the stack"""
+        """Pops an item from the stack and returns it"""
         old_first = self._first
         self._first = old_first.next
 
