@@ -21,13 +21,16 @@ class Stack:
         self._size: int = 0
 
     def is_empty(self) -> bool:
+        """Returns true if the first item is None"""
         return self._first is None
 
     @property
     def size(self) -> int:
+        """Returns the size of the stack"""
         return self._size
 
     def push(self, item: str) -> None:
+        """Pushes an item onto the stack"""
         old_first = self._first
         first = Node()
 
@@ -38,6 +41,7 @@ class Stack:
         self._size += 1
 
     def pop(self) -> str:
+        """Pops an item from the stack"""
         old_first = self._first
         self._first = old_first.next
 
