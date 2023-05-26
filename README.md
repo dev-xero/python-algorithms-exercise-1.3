@@ -8,7 +8,7 @@
 ## Algorithms Implemented
 1. is_valid_parens()
 2. is_circular_shift_of()
-3. convert_to_infix_expression()
+3. to_infix()
 4. to_postfix()
 
 ## Code Examples
