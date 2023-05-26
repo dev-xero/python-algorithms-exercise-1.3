@@ -26,7 +26,9 @@ def convert_to_infix_expression(expression: str) -> str:
             operator = stack.pop()
             left_operand = stack.pop()
 
-            stack.push("(" + left_operand + operator + right_operand + ")")
+            res = f"({left_operand}{operator}{right_operand})"
+
+            stack.push(res)
 
         elif char in operators:
             stack.push(char)
