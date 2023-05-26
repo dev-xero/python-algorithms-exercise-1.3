@@ -14,6 +14,7 @@ from data_structures.stack_ds import Stack
 
 
 def eval_postfix(postfix_expression: str) -> int:
+    """Returns the evaluation of a valid postfix expression"""
     postfix_expression_array = postfix_expression.split(" ")
     stack: Stack = Stack()
     operators = ["+", "-", "*", "/"]
