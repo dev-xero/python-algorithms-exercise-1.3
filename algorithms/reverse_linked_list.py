@@ -15,6 +15,7 @@ from algorithms.traverse_and_print import traverse_and_print
 
 
 def reverse_linked_list(head: Node) -> Node:
+    """Reverses a linked-list"""
     current = head
     previous = None
 
