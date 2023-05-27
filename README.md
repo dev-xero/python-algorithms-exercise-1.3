@@ -11,6 +11,7 @@
 3. to_infix()
 4. to_postfix()
 5. eval_postfix()
+6. traverse_and_search()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
