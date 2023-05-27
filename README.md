@@ -18,6 +18,7 @@
 8. traverse_and_print()
 9. reverse_linked_list()
 10. recursive_reverse_linked_list()
+11. remove_all_from_linked_list()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
