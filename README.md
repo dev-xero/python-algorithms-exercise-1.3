@@ -5,6 +5,7 @@
 1. Linked Lists (Singly)
 2. Push Down Stack
 3. Queue
+4. Circular Queue
 
 ## Algorithms Implemented
 1. is_valid_parens()
