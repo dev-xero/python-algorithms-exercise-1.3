@@ -13,6 +13,8 @@
 4. to_postfix()
 5. eval_postfix()
 6. traverse_and_search()
+7. linked_list_remove_after()
+8. traverse_and_print()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
