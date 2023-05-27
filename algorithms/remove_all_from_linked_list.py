@@ -15,6 +15,7 @@ from algorithms.traverse_and_print import traverse_and_print
 
 
 def remove_all_from_linked_list(key: str, head: Node) -> Node:
+    """Removes all occurrences of an item in a linked list if present"""
     if head is None:
         raise Exception("Cannot remove from an empty linked list")
 
