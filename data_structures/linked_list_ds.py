@@ -9,9 +9,9 @@
 
 class Node:
     """Linked list implementation in Python"""
-    def __init__(self):
+    def __init__(self, item=None):
         """Setup"""
-        self.item: str | None = None
+        self.item: str | None = item
         self.next: Node | None = None
 
 
