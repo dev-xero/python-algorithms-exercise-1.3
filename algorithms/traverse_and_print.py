@@ -14,6 +14,7 @@ from data_structures.linked_list_ds import Node
 
 
 def traverse_and_print(start: Node) -> None:
+    """Traverses and prints the items in the node of a linked list"""
     if not start or type(start) is not Node:
         raise Exception("A valid node must be specified")
 
