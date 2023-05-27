@@ -33,6 +33,7 @@ def reverse_linked_list(head: Node) -> Node:
 
 
 def recursive_reverse_linked_list(head: Node) -> Node | None:
+    """Recursively reverses a linked list"""
     if head is None or head.next is None:
         return head
 
