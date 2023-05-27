@@ -14,7 +14,7 @@ from algorithms.traverse_and_print import traverse_and_print
 # ---------------------------------------------------------------------------------------------------------
 
 
-def reverse_linked_list(head: Node) -> None | Node:
+def reverse_linked_list(head: Node) -> Node:
     current = head
     previous = None
 
@@ -41,10 +41,10 @@ def main():
     head.next.next.next.next = Node("5")
 
     traverse_and_print(head)
-    reverse_linked_list(head)
+    new_head = reverse_linked_list(head)
 
     print()
-    traverse_and_print(head)
+    traverse_and_print(new_head)
 
 
 # ---------------------------------------------------------------------------------------------------------
