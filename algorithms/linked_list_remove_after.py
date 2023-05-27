@@ -8,6 +8,7 @@
 
 
 from data_structures.linked_list_ds import Node
+from algorithms.traverse_and_print import traverse_and_print
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -59,11 +60,7 @@ def main():
 
     print("removed: ", remove_node_after(node_one, node_three).item)
 
-    current = node_one
-
-    while current:
-        print(current.item)
-        current = current.next
+    traverse_and_print(node_one)
 
 
 # ---------------------------------------------------------------------------------------------------------
