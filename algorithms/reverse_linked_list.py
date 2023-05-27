@@ -42,6 +42,8 @@ def main():
 
     traverse_and_print(head)
     reverse_linked_list(head)
+
+    print()
     traverse_and_print(head)
 
 

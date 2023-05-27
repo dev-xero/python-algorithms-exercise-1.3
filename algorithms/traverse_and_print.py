@@ -21,7 +21,7 @@ def traverse_and_print(start: Node) -> None:
     current = start
 
     while current:
-        print(current.item)
+        print(f"{current.item} ", end="")
         current = current.next
 
 
