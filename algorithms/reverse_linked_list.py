@@ -29,6 +29,20 @@ def reverse_linked_list(head: Node) -> Node:
 
     return previous
 
+# ---------------------------------------------------------------------------------------------------------
+
+
+def recursive_reverse_linked_list(head: Node) -> Node | None:
+    if head is None or head.next is None:
+        return head
+
+    reversed_list = recursive_reverse_linked_list(head.next)
+
+    head.next.next = head
+    head.next = None
+
+    return reversed_list
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -46,6 +60,10 @@ def main():
 
     print()
     traverse_and_print(new_head)
+
+    print()
+    new_recursive_head = recursive_reverse_linked_list(new_head)
+    traverse_and_print(new_recursive_head)
 
 
 # ---------------------------------------------------------------------------------------------------------
