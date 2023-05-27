@@ -36,3 +36,18 @@ Some code examples of the algorithms and data structures implemented.
     balanced_parens_string = "(({[()]})[])"
     print(is_valid_parens(balanced_parens_string))  # the string is balanced
 ```
+
+### 3. recursive_reverse_linked_list()
+```python3
+    def recursive_reverse_linked_list(head: Node) -> Node | None:
+        """Recursively reverses a linked list"""
+        if head is None or head.next is None:
+            return head
+
+        reversed_list = recursive_reverse_linked_list(head.next)
+
+        head.next.next = head
+        head.next = None
+
+        return reversed_list
+```
