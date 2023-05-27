@@ -14,6 +14,7 @@ from data_structures.linked_list_ds import Node
 
 
 def remove_node_after(start: Node, key: Node) -> Node:
+    """Traverses the linked list and returns the removed node if present"""
     current = start
     removed_node: Node | None = None
 
