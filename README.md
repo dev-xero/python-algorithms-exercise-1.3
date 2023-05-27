@@ -4,6 +4,7 @@
 ## Data Structures Implemented
 1. Linked Lists (Singly)
 2. Push Down Stack
+3. Queue
 
 ## Algorithms Implemented
 1. is_valid_parens()
