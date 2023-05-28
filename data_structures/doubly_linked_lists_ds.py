@@ -81,9 +81,31 @@ class DoublyLinkedList:
 
         return current
 
+    def append_after(self, node: Node, item: str) -> Node:
+        if node is None:
+            raise Exception("Cannot append after an empty node")
+
+        current = node
+
+        while current:
+            if current == node:
+                new_node = self.Node(item)
+                new_node.prev = current
+
+                if current.next:
+                    current.next.prev = new_node
+
+                else:
+                    self.tail = new_node
+
+                current.next = new_node
+
+                return new_node
+
+            current = current.next
+
 
 # ---------------------------------------------------------------------------------------------------------
-
 
 def main():
     """Testing"""
@@ -98,6 +120,8 @@ def main():
 
     head.prepend_before(last, "4.5")
     head.prepend_before(second, "1.5")
+
+    head.append_after(last, "6")
 
     current = head.head
 
