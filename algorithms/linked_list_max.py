@@ -35,6 +35,7 @@ def linked_list_max(head: Node) -> int:
 
 
 def recursive_linked_list_max(head: Node, max_item: int) -> int:
+    """Recursively returns the max item in a linked list, returns 0 if head is empty"""
     if head is None:
         return max_item
 
