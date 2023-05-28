@@ -8,6 +8,7 @@
 
 
 class DoublyLinkedList:
+    """Python implementation of a doubly linked list"""
     class Node:
         """Node definition for doubly linked lists"""
         def __init__(self, item: str = None):
@@ -21,6 +22,7 @@ class DoublyLinkedList:
         self.tail = None
 
     def prepend(self, item: str) -> Node:
+        """Prepend an item to the linked list before head"""
         new_node = self.Node(item)
 
         if self.head is None:
