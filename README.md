@@ -2,10 +2,11 @@
 🐍 Algorithms and data structures implemented while studying subchapter 1.3 written in Python
 
 ## Data Structures Implemented
-1. Linked Lists (Singly)
-2. Push Down Stack
-3. Queue
-4. Circular Queue
+1. Singly Linked Lists
+2. Doubly Linked Lists (WIP)
+3. Push Down Stack
+4. Queue
+5. Circular Queue
 
 ## Algorithms Implemented
 1. is_valid_parens()
