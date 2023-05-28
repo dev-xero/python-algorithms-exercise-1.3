@@ -82,6 +82,7 @@ class DoublyLinkedList:
         return current
 
     def append_after(self, node: Node, item: str) -> Node:
+        """Appends a node after another node in the linked list if present"""
         if node is None:
             raise Exception("Cannot append after an empty node")
 
