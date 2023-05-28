@@ -8,8 +8,8 @@
 
 
 def is_circular_shift_of(a: str, b: str) -> bool:
-    """Returns true if a string "b" is a circular rotation of another string "a" """
-    return len(a) == len(b) and b in (a + a)
+    """Returns true if a string "a" is a circular rotation of another string "b" """
+    return len(a) == len(b) and a in (b + b)
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -17,10 +17,10 @@ def is_circular_shift_of(a: str, b: str) -> bool:
 
 def main():
     """Testing"""
-    test_string_a = "AWARD"
-    test_string_b = "WARDA"
+    test_base_string = str(input("Enter base string: "))
+    tst_shifted_string = str(input("Enter shifted string: "))
 
-    print(is_circular_shift_of(test_string_a, test_string_b))
+    print(is_circular_shift_of(tst_shifted_string, test_base_string))
 
 
 # ---------------------------------------------------------------------------------------------------------
