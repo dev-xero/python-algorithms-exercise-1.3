@@ -15,6 +15,7 @@ from algorithms.traverse_and_print import traverse_and_print
 
 
 def linked_list_max(head: Node) -> int:
+    """Returns the max item in a linked list, returns 0 if head is empty"""
     max_item: int = 0
     if head is None:
         raise Exception("Cannot find max from an empty linked list")
