@@ -31,27 +31,14 @@ def traverse_and_search(key: str, start: Node) -> Node | None:
 
 def main():
     """Testing"""
-    first = Node()
-    second = Node()
-    third = Node()
-    fourth = Node()
-    fifth = Node()
-    sixth = Node()
+    head = Node("first")  # first -> second -> third -> fourth -> fifth -> sixth
+    head.next = Node("second")
+    head.next.next = Node("third")
+    head.next.next.next = Node("fourth")
+    head.next.next.next.next = Node("fifth")
+    head.next.next.next.next.next = Node("sixth")
 
-    first.item = "first"
-    second.item = "second"
-    third.item = "third"
-    fourth.item = "fourth"
-    fifth.item = "fifth"
-    sixth.item = "sixth"
-
-    first.next = second
-    second.next = third
-    third.next = fourth
-    fourth.next = fifth
-    fifth.next = sixth
-
-    print(traverse_and_search("fifth", first))
+    print(traverse_and_search("fifth", head).item)  # exists
 
 
 # ---------------------------------------------------------------------------------------------------------
