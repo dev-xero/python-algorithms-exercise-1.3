@@ -18,11 +18,11 @@ class DoublyLinkedList:
 
     def __init__(self):
         """Setup"""
-        self.head = None
-        self.tail = None
+        self.head: None | DoublyLinkedList.Node = None
+        self.tail: None | DoublyLinkedList.Node = None
 
     def prepend(self, item: str) -> Node:
-        """Prepend an item to the linked list before this node"""
+        """Prepends an item to the start of the list"""
         new_node = self.Node(item)
 
         if self.head is None:
@@ -36,6 +36,23 @@ class DoublyLinkedList:
 
         return self.head
 
+    def append(self, item: str) -> Node:
+        """Appends an item at the end of the linked list"""
+        new_node = self.Node(item)
+
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+
+        else:
+            new_node.next = None
+            new_node.prev = self.tail
+
+            self.tail.next = new_node
+            self.tail = new_node
+
+        return self.tail
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -46,9 +63,18 @@ def main():
     head.prepend("4")
     head.prepend("3")
     head.prepend("2")
-    a = head.prepend("1")
+    head.prepend("1")
 
-    print(a.next.next.next.item)
+    head.append("5")
+
+    print(head.tail.item)
+
+    current = head.head
+
+    while current:
+        print(current.item, end=" ")
+        current = current.next
+
 
 # ---------------------------------------------------------------------------------------------------------
 
