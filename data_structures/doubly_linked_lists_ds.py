@@ -7,12 +7,6 @@
 # ---------------------------------------------------------------------------------------------------------
 
 
-from algorithms.traverse_and_print import traverse_and_print
-
-
-# ---------------------------------------------------------------------------------------------------------
-
-
 class DoubleNode:
     """Node definition for doubly linked lists"""
     def __init__(self, item: str = None):
@@ -121,6 +115,8 @@ class DoublyLinkedList:
 
 def main():
     """Testing"""
+    from algorithms.traverse_and_print_doubly_linked_list import traverse_and_print
+
     head = DoublyLinkedList()  # doubly linked list
     head.prepend("5")
     head.prepend("3")
@@ -137,7 +133,7 @@ def main():
     head.append_after(fourth, "6")
     head.append_after(fourth, "7")
 
-    traverse_and_print(head.head)
+    traverse_and_print(last.next, "reverse")
 
 
 # ---------------------------------------------------------------------------------------------------------
