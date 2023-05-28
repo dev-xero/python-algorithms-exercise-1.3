@@ -19,6 +19,7 @@
 9. reverse_linked_list()
 10. recursive_reverse_linked_list()
 11. remove_all_from_linked_list()
+12. linked_list_max()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
