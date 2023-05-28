@@ -22,7 +22,8 @@
 11. remove_all_from_linked_list()
 12. linked_list_max()
 13. recursive_linked_list_max()
-14. Doubly Linked List Class methods:
+14. traverse_and_print() (Doubly Linked Lists)
+15. Doubly Linked List Class methods:
     - append()
     - prepend()
     - append_after()
