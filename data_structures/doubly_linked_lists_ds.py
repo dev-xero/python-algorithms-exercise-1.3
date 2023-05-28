@@ -95,6 +95,7 @@ class DoublyLinkedList:
 
                 if current.next:
                     current.next.prev = new_node
+                    new_node.next = current.next
 
                 else:
                     self.tail = new_node
@@ -111,18 +112,20 @@ class DoublyLinkedList:
 def main():
     """Testing"""
     head = DoublyLinkedList()  # doubly linked list
-    head.prepend("4")
+    head.prepend("5")
     head.prepend("3")
     head.prepend("2")
     head.prepend("1")
 
-    last = head.append("5")
-    second = last.prev.prev.prev
+    last = head.append("9")
+    fourth = last.prev
 
-    head.prepend_before(last, "4.5")
-    head.prepend_before(second, "1.5")
+    head.prepend_before(last, "8")
+    head.prepend_before(fourth, "4")
 
-    head.append_after(last, "6")
+    head.append_after(last, "10")
+    head.append_after(fourth, "6")
+    head.append_after(fourth, "7")
 
     current = head.head
 
