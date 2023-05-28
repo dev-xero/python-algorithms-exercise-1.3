@@ -20,18 +20,13 @@ class Node:
 
 def main():
     """Testing"""
-    first = Node()
-    second = Node()
-    third = Node()
+    head = Node("1")  # linked list: 1 -> 2 -> 3 -> 4 -> 5
+    head.next = Node("2")
+    head.next.next = Node("3")
+    head.next.next.next = Node("4")
+    head.next.next.next.next = Node("5")
 
-    first.item = "first"
-    second.item = "second"
-    third.item = "third"
-
-    first.next = second
-    second.next = third
-
-    print(first.next.next.item)
+    print(head.next.next.item)  # 3
 
 
 # ---------------------------------------------------------------------------------------------------------
