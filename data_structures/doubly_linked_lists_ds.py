@@ -53,6 +53,34 @@ class DoublyLinkedList:
 
         return self.tail
 
+    def prepend_before(self, node: Node, item: str) -> Node:
+        """Prepends an item before a node in the linked list if it exists"""
+        if node is None:
+            raise Exception("Cannot prepend before an empty node")
+
+        current = node
+
+        while current:
+            if current == node:
+                new_node = self.Node(item)
+
+                new_node.prev = current.prev
+                new_node.next = current
+
+                if current.prev:
+                    current.prev.next = new_node
+
+                else:
+                    self.head = new_node
+
+                current.prev = new_node
+
+                return new_node
+
+            current = current.prev
+
+        return current
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -65,9 +93,11 @@ def main():
     head.prepend("2")
     head.prepend("1")
 
-    head.append("5")
+    last = head.append("5")
+    second = last.prev.prev.prev
 
-    print(head.tail.item)
+    head.prepend_before(last, "4.5")
+    head.prepend_before(second, "1.5")
 
     current = head.head
 
