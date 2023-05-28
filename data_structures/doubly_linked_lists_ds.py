@@ -22,7 +22,7 @@ class DoublyLinkedList:
         self.tail = None
 
     def prepend(self, item: str) -> Node:
-        """Prepend an item to the linked list before head"""
+        """Prepend an item to the linked list before this node"""
         new_node = self.Node(item)
 
         if self.head is None:
