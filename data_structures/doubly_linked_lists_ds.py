@@ -22,7 +22,7 @@ class DoublyLinkedList:
         self.tail: None | DoublyLinkedList.Node = None
 
     def prepend(self, item: str) -> Node:
-        """Prepends an item to the start of the list"""
+        """Prepends a node to the start of the list"""
         new_node = self.Node(item)
 
         if self.head is None:
@@ -37,7 +37,7 @@ class DoublyLinkedList:
         return self.head
 
     def append(self, item: str) -> Node:
-        """Appends an item at the end of the linked list"""
+        """Appends a node at the end of the linked list"""
         new_node = self.Node(item)
 
         if self.head is None:
@@ -54,7 +54,7 @@ class DoublyLinkedList:
         return self.tail
 
     def prepend_before(self, node: Node, item: str) -> Node:
-        """Prepends an item before a node in the linked list if it exists"""
+        """Prepends a node before another node in the linked list if it exists"""
         if node is None:
             raise Exception("Cannot prepend before an empty node")
 
