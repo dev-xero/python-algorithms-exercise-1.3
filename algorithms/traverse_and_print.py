@@ -30,24 +30,13 @@ def traverse_and_print(start: Node) -> None:
 
 def main():
     """Testing"""
-    first: Node = Node()
-    second: Node = Node()
-    third: Node = Node()
-    fourth: Node = Node()
-    fifth: Node = Node()
+    head = Node("first")  # linked list: first -> second -> third -> fourth -> fifth
+    head.next = Node("second")
+    head.next.next = Node("third")
+    head.next.next.next = Node("fourth")
+    head.next.next.next.next = Node("fifth")
 
-    first.item = "first"
-    second.item = "second"
-    third.item = "third"
-    fourth.item = "fourth"
-    fifth.item = "fifth"
-
-    first.next = second
-    second.next = third
-    third.next = fourth
-    fourth.next = fifth
-
-    traverse_and_print(first)
+    traverse_and_print(head)
 
 
 # ---------------------------------------------------------------------------------------------------------
