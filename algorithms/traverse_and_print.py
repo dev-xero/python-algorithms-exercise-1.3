@@ -8,18 +8,17 @@
 
 
 from data_structures.linked_list_ds import Node
-from data_structures.doubly_linked_lists_ds import DoubleNode
 
 
 # ---------------------------------------------------------------------------------------------------------
 
 
-def traverse_and_print(start: Node) -> None:
+def traverse_and_print(head: Node) -> None:
     """Traverses and prints the items in the node of a linked list"""
-    if not start or type(start) is not Node:
+    if not head or type(head) is not Node:
         raise Exception("A valid node must be specified")
 
-    current = start
+    current = head
 
     while current:
         print(f"{current.item} ", end="")
