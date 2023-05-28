@@ -22,6 +22,11 @@
 11. remove_all_from_linked_list()
 12. linked_list_max()
 13. recursive_linked_list_max()
+14. Doubly Linked List Class methods:
+    - append()
+    - prepend()
+    - append_after()
+    - prepend_before()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
