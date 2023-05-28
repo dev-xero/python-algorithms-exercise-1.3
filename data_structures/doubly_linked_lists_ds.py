@@ -7,23 +7,33 @@
 # ---------------------------------------------------------------------------------------------------------
 
 
+from algorithms.traverse_and_print import traverse_and_print
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
+class DoubleNode:
+    """Node definition for doubly linked lists"""
+    def __init__(self, item: str = None):
+        self.item = item
+        self.next = None
+        self.prev = None
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 class DoublyLinkedList:
     """Python implementation of a doubly linked list"""
-    class Node:
-        """Node definition for doubly linked lists"""
-        def __init__(self, item: str = None):
-            self.item = item
-            self.next = None
-            self.prev = None
-
     def __init__(self):
         """Setup"""
-        self.head: None | DoublyLinkedList.Node = None
-        self.tail: None | DoublyLinkedList.Node = None
+        self.head: None | DoubleNode = None
+        self.tail: None | DoubleNode = None
 
-    def prepend(self, item: str) -> Node:
+    def prepend(self, item: str) -> DoubleNode:
         """Prepends a node to the start of the list"""
-        new_node = self.Node(item)
+        new_node = DoubleNode(item)
 
         if self.head is None:
             self.head = new_node
@@ -36,9 +46,9 @@ class DoublyLinkedList:
 
         return self.head
 
-    def append(self, item: str) -> Node:
+    def append(self, item: str) -> DoubleNode:
         """Appends a node at the end of the linked list"""
-        new_node = self.Node(item)
+        new_node = DoubleNode(item)
 
         if self.head is None:
             self.head = new_node
@@ -53,7 +63,7 @@ class DoublyLinkedList:
 
         return self.tail
 
-    def prepend_before(self, node: Node, item: str) -> Node:
+    def prepend_before(self, node: DoubleNode, item: str) -> DoubleNode:
         """Prepends a node before another node in the linked list if it exists"""
         if node is None:
             raise Exception("Cannot prepend before an empty node")
@@ -62,7 +72,7 @@ class DoublyLinkedList:
 
         while current:
             if current == node:
-                new_node = self.Node(item)
+                new_node = DoubleNode(item)
 
                 new_node.prev = current.prev
                 new_node.next = current
@@ -81,7 +91,7 @@ class DoublyLinkedList:
 
         return current
 
-    def append_after(self, node: Node, item: str) -> Node:
+    def append_after(self, node: DoubleNode, item: str) -> DoubleNode:
         """Appends a node after another node in the linked list if present"""
         if node is None:
             raise Exception("Cannot append after an empty node")
@@ -90,7 +100,7 @@ class DoublyLinkedList:
 
         while current:
             if current == node:
-                new_node = self.Node(item)
+                new_node = DoubleNode(item)
                 new_node.prev = current
 
                 if current.next:
@@ -127,11 +137,7 @@ def main():
     head.append_after(fourth, "6")
     head.append_after(fourth, "7")
 
-    current = head.head
-
-    while current:
-        print(current.item, end=" ")
-        current = current.next
+    traverse_and_print(head.head)
 
 
 # ---------------------------------------------------------------------------------------------------------

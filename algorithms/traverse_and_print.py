@@ -8,6 +8,7 @@
 
 
 from data_structures.linked_list_ds import Node
+from data_structures.doubly_linked_lists_ds import DoubleNode
 
 
 # ---------------------------------------------------------------------------------------------------------
