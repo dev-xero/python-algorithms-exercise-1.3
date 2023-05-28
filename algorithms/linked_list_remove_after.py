@@ -14,12 +14,12 @@ from algorithms.traverse_and_print import traverse_and_print
 # ---------------------------------------------------------------------------------------------------------
 
 
-def remove_node_after(start: Node, key: Node) -> Node:
+def remove_node_after(head: Node, key: Node) -> Node:
     """Traverses the linked list and returns the removed node if present"""
-    current = start
+    current = head
     removed_node: Node | None = None
 
-    if not start or not key:
+    if not head or not key:
         raise Exception("Needs both key and a starting node")
 
     while current.next:
@@ -41,26 +41,15 @@ def remove_node_after(start: Node, key: Node) -> Node:
 
 def main():
     """Testing"""
-    node_one = Node()
-    node_two = Node()
-    node_three = Node()
-    node_four = Node()
-    node_five = Node()
+    head = Node("1")  # 1 -> 2 -> 3 -> 4 -> 5
+    head.next = Node("2")
+    head.next.next = Node("3")
+    head.next.next.next = Node("4")
+    head.next.next.next.next = Node("5")
 
-    node_one.item = "1"
-    node_two.item = "2"
-    node_three.item = "3"
-    node_four.item = "4"
-    node_five.item = "5"
+    print("removed:", remove_node_after(head, head.next.next).item)
 
-    node_one.next = node_two
-    node_two.next = node_three
-    node_three.next = node_four
-    node_four.next = node_five
-
-    print("removed: ", remove_node_after(node_one, node_three).item)
-
-    traverse_and_print(node_one)
+    traverse_and_print(head)
 
 
 # ---------------------------------------------------------------------------------------------------------
