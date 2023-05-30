@@ -7,6 +7,7 @@
 3. Push Down Stack
 4. Queue
 5. Circular Queue
+6. Steque
 
 ## Algorithms Implemented
 1. is_valid_parens()
