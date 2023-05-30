@@ -30,6 +30,7 @@
     - prepend_before()
     - remove_head()
     - remove_tail()
+    - remove_node()
  16. spiral_matrix()
 
 ## Code Examples
