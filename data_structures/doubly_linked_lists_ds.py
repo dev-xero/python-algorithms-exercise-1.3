@@ -118,6 +118,14 @@ class DoublyLinkedList:
 
         return next_node
 
+    def remove_tail(self) -> None:
+        """Removes the tail from a linked list and sets the previous node as the new tail"""
+        new_last = self.tail.prev
+        new_last.next = None
+        self.tail = new_last
+
+        return self.tail
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -142,6 +150,8 @@ def main():
     linked_list.append_after(fourth, "7")
 
     head = linked_list.remove_head()
+    linked_list.remove_tail()
+    linked_list.remove_tail()
 
     traverse_and_print(head, "forward")
 
