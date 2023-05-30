@@ -128,6 +128,9 @@ class DoublyLinkedList:
 
     def remove(self, node: DoubleNode) -> DoubleNode:
         """Removes a node from a doubly linked list if it exists"""
+        if type(node) is not DoubleNode:
+            raise Exception("Node to remove must be a valid double node")
+
         curr_node = node
         prev_node = node.prev or None
         next_node = node.next or None
