@@ -8,6 +8,7 @@
 4. Queue
 5. Circular Queue
 6. Steque
+7. Deque
 
 ## Algorithms Implemented
 1. is_valid_parens()
@@ -24,7 +25,8 @@
 12. linked_list_max()
 13. recursive_linked_list_max()
 14. traverse_and_print() (Doubly Linked Lists)
-15. Doubly Linked List Class methods:
+15. spiral_matrix()
+16. Doubly Linked List Class methods:
     - append()
     - prepend()
     - append_after()
@@ -32,7 +34,13 @@
     - remove_head()
     - remove_tail()
     - remove_node()
- 16. spiral_matrix()
+ 16. Deque Class methods:  
+     - is_empty()
+     - size()
+     - pushLeft()
+     - pushRight()
+     - popLeft()
+     - popRight()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
