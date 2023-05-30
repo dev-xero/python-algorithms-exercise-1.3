@@ -127,6 +127,7 @@ class DoublyLinkedList:
         return self.tail
 
     def remove(self, node: DoubleNode) -> DoubleNode:
+        """Removes a node from a doubly linked list if it exists"""
         curr_node = node
         prev_node = node.prev or None
         next_node = node.next or None
