@@ -126,6 +126,35 @@ class DoublyLinkedList:
 
         return self.tail
 
+    def remove(self, node: DoubleNode) -> DoubleNode:
+        curr_node = node
+        prev_node = node.prev or None
+        next_node = node.next or None
+
+        while curr_node.next:
+            if curr_node == node:
+                if not curr_node.prev:
+                    new_head = curr_node.next
+                    new_head.prev = None
+                    self.head = new_head
+
+                    return self.head
+
+                if not curr_node.next:
+                    new_tail = curr_node.prev
+                    new_tail.next = None
+                    self.tail = new_tail
+
+                    return self.head
+
+                prev_node.next = next_node
+                next_node.prev = prev_node
+
+                curr_node.next = None
+                curr_node.prev = None
+
+                return self.head
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -140,7 +169,7 @@ def main():
     linked_list.prepend("1")
 
     last = linked_list.append("9")
-    fourth = last.prev
+    fourth = last.prev  # node.item = 5
 
     linked_list.prepend_before(last, "8")
     linked_list.prepend_before(fourth, "4")
@@ -149,9 +178,11 @@ def main():
     linked_list.append_after(fourth, "6")
     linked_list.append_after(fourth, "7")
 
-    head = linked_list.remove_head()
+    linked_list.remove_head()
     linked_list.remove_tail()
     linked_list.remove_tail()
+
+    head = linked_list.remove(fourth)  # removes 5
 
     traverse_and_print(head, "forward")
 
