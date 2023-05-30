@@ -110,6 +110,14 @@ class DoublyLinkedList:
 
             current = current.next
 
+    def remove_head(self) -> DoubleNode:
+        """Removes the head from a linked-list and sets the next node as the head"""
+        next_node = self.head.next
+        next_node.prev = None
+        self.head = next_node
+
+        return next_node
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -117,23 +125,25 @@ def main():
     """Testing"""
     from algorithms.traverse_and_print_doubly_linked_list import traverse_and_print
 
-    head = DoublyLinkedList()  # doubly linked list
-    head.prepend("5")
-    head.prepend("3")
-    head.prepend("2")
-    head.prepend("1")
+    linked_list = DoublyLinkedList()  # doubly linked list
+    linked_list.prepend("5")
+    linked_list.prepend("3")
+    linked_list.prepend("2")
+    linked_list.prepend("1")
 
-    last = head.append("9")
+    last = linked_list.append("9")
     fourth = last.prev
 
-    head.prepend_before(last, "8")
-    head.prepend_before(fourth, "4")
+    linked_list.prepend_before(last, "8")
+    linked_list.prepend_before(fourth, "4")
 
-    head.append_after(last, "10")
-    head.append_after(fourth, "6")
-    head.append_after(fourth, "7")
+    linked_list.append_after(last, "10")
+    linked_list.append_after(fourth, "6")
+    linked_list.append_after(fourth, "7")
 
-    traverse_and_print(last.next, "reverse")
+    head = linked_list.remove_head()
+
+    traverse_and_print(head, "forward")
 
 
 # ---------------------------------------------------------------------------------------------------------
