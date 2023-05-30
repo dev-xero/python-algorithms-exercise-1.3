@@ -28,6 +28,7 @@
     - prepend()
     - append_after()
     - prepend_before()
+ 16. spiral_matrix()
 
 ## Code Examples
 Some code examples of the algorithms and data structures implemented.  
