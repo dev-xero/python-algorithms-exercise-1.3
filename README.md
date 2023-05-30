@@ -3,7 +3,7 @@
 
 ## Data Structures Implemented
 1. Singly Linked Lists
-2. Doubly Linked Lists (WIP)
+2. Doubly Linked Lists
 3. Push Down Stack
 4. Queue
 5. Circular Queue
