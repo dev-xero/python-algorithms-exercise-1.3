@@ -28,6 +28,8 @@
     - prepend()
     - append_after()
     - prepend_before()
+    - remove_head()
+    - remove_tail()
  16. spiral_matrix()
 
 ## Code Examples
