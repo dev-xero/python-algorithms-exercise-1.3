@@ -75,3 +75,14 @@ def recursive_reverse_linked_list(head: Node) -> Node | None:
 
     return reversed_list
 ```
+
+### 4. Deque Data Structure
+```python3
+class Deque:
+    """A double-ended queue"""
+    def __init__(self):
+        """Setup"""
+        self._head: None | Node = None
+        self._tail: None | Node = None
+        self._size: int = 0
+```
