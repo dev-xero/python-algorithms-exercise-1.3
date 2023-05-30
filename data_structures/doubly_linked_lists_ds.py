@@ -126,7 +126,7 @@ class DoublyLinkedList:
 
         return self.tail
 
-    def remove(self, node: DoubleNode) -> DoubleNode:
+    def remove_node(self, node: DoubleNode) -> DoubleNode:
         """Removes a node from a doubly linked list if it exists"""
         if type(node) is not DoubleNode:
             raise Exception("Node to remove must be a valid double node")
@@ -186,7 +186,7 @@ def main():
     linked_list.remove_tail()
     linked_list.remove_tail()
 
-    head = linked_list.remove(fourth)  # removes 5
+    head = linked_list.remove_node(fourth)  # removes 5
 
     traverse_and_print(head, "forward")
 
