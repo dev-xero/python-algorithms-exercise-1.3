@@ -1,7 +1,7 @@
 # https://github.com/dev-xero/python-algorithms-exercise-1.3
 
 """spiral_matrix.py
-   Python algorithm to walk a matrix
+   Python algorithm to return the path of a matrix in spiral order
 """
 
 # ---------------------------------------------------------------------------------------------------------
