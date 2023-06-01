@@ -14,7 +14,7 @@ from data_structures.queue_ds import Queue
 
 
 def josephus(num: int, eliminate_every: int) -> Queue:
-    """Algorithm showing the execution order eliminating an item at a specific distance"""
+    """Algorithm showing the execution order when eliminating an item at a specific distance"""
     if eliminate_every >= num:
         raise Exception("Elimination step must be less than the number of people")
 
