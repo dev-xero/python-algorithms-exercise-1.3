@@ -26,7 +26,8 @@
 13. recursive_linked_list_max()
 14. traverse_and_print() (Doubly Linked Lists)
 15. spiral_matrix()
-16. Doubly Linked List Class methods:
+16. josephus_problem()
+17. Doubly Linked List Class methods:
     - append()
     - prepend()
     - append_after()
